@@ -1,6 +1,7 @@
 import react from "react";
 import { useEffect, useState } from 'react'
-import io from 'Socket.IO-client'
+import io from 'Socket.IO-client';
+import Game from "../components/Game";
 
 let socket;
 
@@ -32,13 +33,8 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <input
-        placeholder="Type something"
-        value={input}
-        onChange={onChangeHandler}
-        // onChange={(e) => setInput(e.target.value)}
-      />
+    <div className="h-screen bg-[#111111] text-white">
+        <Game />
     </div>
   )
 }
